@@ -3,16 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import AppRouter from './utilities/Router'
-import { useNavigate } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
-  const navigation = useNavigate();
-
-  const goto = (to: string) => {
-    navigation(to);
-  }
-
+  
   return (
     <>
       <div>
@@ -34,10 +28,6 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
-      </div>
-      <div className="card">
-        <button onClick={() => goto("/home")}>Home</button>
-        <button onClick={() => goto("/about")}>About</button>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
